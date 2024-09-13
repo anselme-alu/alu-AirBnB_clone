@@ -1,67 +1,57 @@
-# AirBnB Clone - Command Interpreter
+# AirBnB Clone - Command-Line Interface
 
-This is the first step towards building a full-stack clone of the AirBnB web application. The goal of this project is to create a command-line interpreter that can manage various objects like users, places, cities, and more. This command interpreter serves as a foundation for managing data and will be used in future projects to extend the application with HTML/CSS, API development, and database integration.
+This is the initial phase of creating a full-stack replica of the AirBnB web application. The objective of this project is to develop a command-line interface that can manage various entities such as users, locations, and cities. This CLI will act as a basic tool for data management and will pave the way for future enhancements involving HTML/CSS, API development, and database integration.
 
-## Command Interpreter
+## Command-Line Interface
 
-The command interpreter is a shell-like tool designed for managing AirBnB objects.
+The command-line interface is a shell-like application for managing AirBnB entities.
 
-### How to Start It
+### How to Launch It
 
-Run the following command in your terminal:
+Execute the following command in your terminal:
 ```bash
 ./console.py
-
 ```
+This command will start an interactive prompt where you can input commands to handle your entities.
 
-This will start an interactive command prompt where you can type commands to manage your objects.
 
-## How to Use It
+### How to Use It
 
-Once inside the command interpreter, you can perform the following actions:
+Once you are in the command-line interface, you can perform these operations:
 
-- **Create an object**: 
-  - This command creates a new instance of a class.
-  - Syntax:
-    ```bash
-    (hbnb) create <ClassName>
-    ```
-
-- **Show an object**:
-  - This command retrieves the string representation of an instance based on the class name and ID.
-  - Syntax:
-    ```bash
-    (hbnb) show <ClassName> <object_id>
-    ```
-
-- **Update an object**:
-  - This command updates the attributes of an instance based on the class name, ID, and attribute name and value.
-  - Syntax:
-    ```bash
-    (hbnb) update <ClassName> <object_id> <attribute_name> <attribute_value>
-    ```
-
-- **Delete an object**:
-  - This command deletes an instance based on the class name and ID.
-  - Syntax:
-    ```bash
-    (hbnb) destroy <ClassName> <object_id>
-    ```
-
-- **Exit the interpreter**:
-  - This command exits the command interpreter.
-  - Syntax:
-    ```bash
-    (hbnb) quit
-    ```
-
-### Examples
+- Create a new object (ex: a new User or a new Place)
 
 ```bash
-$ ./console.py
 (hbnb) create User
-(hbnb) show User 1234-5678-9012
-(hbnb) update User 1234-5678-9012 name "John Doe"
-(hbnb) destroy User 1234-5678-9012
+```
+- Retrieve an object from a file, database, etc.
+
+```bash
+(hbnb) show User 1234-1234-1234
+```
+- Update an object (ex: change the name of a City)
+
+```bash
+(hbnb) update City 1234-1234-1234 name "San Francisco"
+```
+- Destroy an object
+
+```bash
+(hbnb) destroy User 1234-1234-1234
+```
+- Quit the program
+
+```bash
 (hbnb) quit
-$
+```
+
+### Supported Entities
+
+The command-line interface supports the following entities:
+
+- User
+- City
+- State
+- Amenity
+- Place
+- Review
